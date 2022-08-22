@@ -57,6 +57,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 102
       Script: {instanceID: 0}
     - Class: 104
@@ -612,7 +616,7 @@ ScriptsOnlyBuild:
     className: StimuliController
   - hash:
       serializedVersion: 2
-      Hash: 9306a26c0af9f36869a288e3c93ed01e
+      Hash: 45d4923ef70ad18919d54271794b90cd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StimuliStarter
@@ -655,4 +659,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: D:/LCD_SSVEP/Build/LCD_SSVEP.exe
+  playerPath: D:/Unity/Unity_Projects/LDC_SSVEP/Build/LCD_SSVEP.exe

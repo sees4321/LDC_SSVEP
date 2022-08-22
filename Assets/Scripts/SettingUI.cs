@@ -8,7 +8,7 @@ public class SettingUI : MonoBehaviour
 {
     private SerialComm serialComm;
     private StimuliStarter stimStarter;
-    private Dropdown drpPortNum, drpBlink, drpBaud, drpColor, drpGraph;
+    private Dropdown drpPortNum, drpBlink, drpBaud, drpColor, drpGraph, drpClass;
     private Button btnStart;
     private Text txtSerialOn;
     private bool isSerialOn = false;
@@ -32,6 +32,7 @@ public class SettingUI : MonoBehaviour
         drpBlink = GameObject.Find("drpBlink").GetComponent<Dropdown>();
         drpGraph = GameObject.Find("drpGraph").GetComponent<Dropdown>();
         drpColor = GameObject.Find("drpColor").GetComponent<Dropdown>();
+        drpClass = GameObject.Find("drpClass").GetComponent<Dropdown>();
         btnStart = GameObject.Find("btnStart").GetComponent<Button>();
         txtSerialOn = GameObject.Find("txtSerialOn").GetComponent<Text>();
         stimStarter = GameObject.Find("Stimulus").GetComponent<StimuliStarter>();
@@ -40,9 +41,6 @@ public class SettingUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-        }
         if (Input.GetKeyDown(KeyCode.R))
         {
             stimStarter.StopSession();
@@ -81,6 +79,7 @@ public class SettingUI : MonoBehaviour
         stimStarter.txtBlink = txtBlink[drpBlink.value];
         StimuliController.colorMode = drpColor.value;
         StimuliController.scaleMode = drpGraph.value;
+        stimStarter.classes = drpClass.value;
         GameObject tempBG = GameObject.Find("BackGround");
         for (int i = 0; i < tempBG.transform.childCount; i++)
             tempBG.transform.GetChild(i).gameObject.SetActive(false);
